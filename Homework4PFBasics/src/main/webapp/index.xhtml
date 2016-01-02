@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="respdiv">
+
+			<div class="ui-grid ui-grid-responsive">
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-12" style="text-align: center;">Contact</div>
+				</div>
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+					<div class="ui-grid-col-2"
+						style="background-color: gray; margin: 5px;">
+						<p:inputText />
+					</div>
+				</div>
+
+			</div>
+
+			<div class="ui-grid ui-grid-responsive">
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-12" style="text-align: center;">Contact</div>
+				</div>
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">1</div>
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">2</div>
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">3</div>
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">4</div>
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">5</div>
+					<div class="ui-grid-col-4"
+						style="background-color: gray; margin: 5px;">6</div>
+				</div>
+
+			</div>
+
+			<p:selectOneMenu id="targetOptions"
+				valueChangeListener="#{sessionEventBean.targetChanged}">
+				<f:selectItem itemLabel="Choose one" itemValue="" />
+				<f:selectItem itemLabel="Budapest" itemValue="Budapest" />
+				<f:selectItem itemLabel="Kőrösladány" itemValue="Kőrösladány" />
+				<f:selectItem itemLabel="Káposztásmegyer"
+					itemValue="Káposztásmegyer" />
+				<f:selectItem itemLabel="Lillafüred, Hámori-tó"
+					itemValue="Lillafüred, Hámori-tó" />
+			</p:selectOneMenu>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<h:form id="sone">
+			<p:growl id="growl" life="2000" />
+			<p:remoteCommand name="updateWatermark" update="selectTargetGrid" />
+			<div class="vaSlot">
+				<nav class="logoH vaMid cl-effect-4">
+					<c:forEach items="#{sessionEventBean.commands}" var="cmd">
+						<p:commandLink value="#{cmd.value}" actionListener="#{cmd.dao.execute}"
+							oncomplete="#{cmd.oncomplete}" update="#{cmd.update}" />
+					</c:forEach>
+				</nav>
+			</div>
+			<h:panelGrid id="selectTargetGrid" columns="3">
+				<p:selectOneMenu id="targetOptions" immediate="true"
+					valueChangeListener="#{sessionEventBean.targetChanged}"
+					value="#{sessionEventBean.targetOption}">
+					<f:selectItem itemLabel="Choose one" itemValue="" />
+					<f:selectItem itemLabel="Budapest" itemValue="Budapest" />
+					<f:selectItem itemLabel="Kőrösladány" itemValue="Kőrösladány" />
+					<f:selectItem itemLabel="Káposztásmegyer"
+						itemValue="Káposztásmegyer" />
+					<f:selectItem itemLabel="Lillafüred, Hámori-tó"
+						itemValue="Lillafüred, Hámori-tó" />
+					<p:ajax event="change" process="@none" immediate="true"
+						onstart="backupTarget()" oncomplete="restoreTarget()" />
+				</p:selectOneMenu>
+
+				<p:watermark id="targetWatermark" for="target"
+					value="#{sessionEventBean.watermark}" />
+				<p:inputText id="target" value="#{sessionEventBean.target}"
+					required="true" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,125 @@
+/*!
+ * Design Styles
+ */
+.truncate-column {
+	max-width: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	xdisplay: block;
+	position: relative;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 5px 10px;
+	outline: none;
+	color: black; // # FF9900;
+	text-decoration: none;
+	xtext-transform: uppercase;
+	xfont-variant: small-caps;
+	letter-spacing: 1px;
+	xfont-weight: 400;
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+	xfont-size: 1.35em;
+}
+
+/* Effect 4: bottom border enlarge */
+.cl-effect-4 a {
+	padding: 0 0 6px;
+}
+
+.cl-effect-4 a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: white; //# FF9900;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-4 a:hover::after,.cl-effect-4 a:focus::after {
+	height: 3px;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.breadCrumb {
+	border-top: thin solid #eeeeee;
+	border-bottom: thin solid #eeeeee;
+	font-size: .9em;
+}
+
+#headRow,#footRow {
+	background-color: #72AC00;
+	font-family: "Arial Black", Gadget, sans-serif;
+	xtext-shadow: 0px 1px 1px #4d4d4d;
+	xfont-size: 18px;
+	font-variant: small-caps;
+	xfont-weight: bold;
+}
+
+body,#centerRow {
+	color: black;
+	background-color: white; // white;
+	min-height: 200px;
+}
+
+.dbg,div {
+	xborder: 1px solid yellow;
+}
+
+.txtEf {
+	text-shadow: 0px 1px 1px #4d4d4d;
+	font-size: 18px;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+.vaSlot {
+	display: table-row !important;
+	float: none;
+}
+
+.vaTop {
+	display: table-cell !important;
+	vertical-align: top;
+	text-align: right;
+}
+
+.vaMid {
+	display: table-cell !important;
+	vertical-align: middle;
+}
+
+.vaBot {
+	display: table-cell !important;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.logoH {
+	height: 55px;
+}
+
+#logo {
+	width: 150px;
+	padding: 5px;
+	color: #264b93;
+	background-image: url("#{resource['img/logo.png']}");
+	background-position: center 7px;
+	background-repeat: no-repeat;
+}

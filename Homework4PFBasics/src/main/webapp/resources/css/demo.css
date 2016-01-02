@@ -1,0 +1,9 @@
+.my-resizeable-col .ui-selectonemenu {
+    width: 100%;
+}
+
+.my-resizeable-col .ui-selectonemenu-label {
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}

@@ -1,0 +1,69 @@
+/*!
+ * Custom Styles
+ */
+ 
+.invokerGrid tr .invoker {
+	visibility: hidden;
+}
+
+.invokerGrid tr:hover .invoker {
+	visibility: visible;
+}
+
+.highlightTableRow {
+	background-color: #E0EEEE !important;
+	font-weight: bold;
+}
+
+.strong {
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+.dbg {
+	font-size: .99em;
+	color: red;
+	display: none;
+}
+
+.grid tr {
+	background: white;
+}
+
+.ui-datatable.grid thead th, .ui-datatable.grid tbody, .ui-datatable.grid tbody tr,
+	.ui-datatable.grid tbody td {
+	border-style: none;
+}
+
+.ui-datatable.grid thead th {
+	padding: 0;
+}
+
+.grid tr, .grid td {
+	border: none !important;
+	xpadding: 2px 0px 2px 0px !important;
+}
+
+.layout-box {
+	background-color: pink;
+}
+
+.ui-dialog .ui-dialog-content {
+	width: auto !important;
+	overflow: visible !important;
+}
+
+input[type=text]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	border: 3px solid rgba(81, 203, 238, 1);
+}
+
+.ui-panelgrid tr, .ui-panelgrid td {
+	background: none;
+	border-style: none !important;
+}
+
+.ui-dialog .ui-dialog-content {
+	padding: 0 !important;
+	overflow: inherit !important;
+}
